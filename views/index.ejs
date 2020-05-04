@@ -1,63 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My CRUD in NodeJS</title>
+  <title>A2 CRUD em NodeJs</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
   <main>
- 
     <h2>Registrar</h2>
     <form action="/show" method="POST">
         <div class="form-group form-row">
-          <div class="col">
+          <div class="col-4">
             <label for="name">Nome: </label>
-            <input type="text" class="form-control" placeholder="Nome" name="name">
+            <input type="text" class="form-control" maxlength="20" placeholder="Nome" name="name">
           </div>
-          <div class="col">
+          <div class="col-4">
             <label for="surname">Sobrenome: </label>
-            <input type="text" class="form-control" placeholder="Sobrenome" name="surname">
+            <input type="text" class="form-control" maxlength="20" placeholder="Sobrenome" name="surname">
           </div>
         </div>
-        <div class="form-group">
-          <label for="sex">Sexo: </label>
-          <select id="sex" class="form-control">
-            <option value="male">Masculino</option>
-            <option value="female">Feminino</option>
-            <option value="other">Outro</option>
-          </select>
+        <div class="form-group form-row">
+          <div class="col-2">
+            <label for="sex">Sexo: </label>
+            <select id="sex" name="sex" class="form-control">
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="col-2">
+            <label for="birth">Nascimento: </label>
+            <input type="date"  class="form-control" id="birth" name="birth">
+          </div>
         </div>
         <div class="form-group form-row">
-          <div class="col">
+          <div class="col-4">
             <label for="email">Email: </label>
-            <input type="text" class="form-control" placeholder="E-mail" name="email">
+            <input type="text" class="form-control" maxlength="30" placeholder="E-mail" name="email">
           </div>
-          <div class="col">
+          <div class="col-4">
             <label for="phone">Telefone: </label>
-            <input type="text" class="form-control" placeholder="Telefone" name="phone">
+            <input type="text" class="form-control" maxlength="14" placeholder="Telefone" name="phone">
           </div>
         </div>
         <div class="form-group">
-          <label for="birth">Nascimento: </label>
-          <input type="date" id="birth" name="birth">
-        </div>
-        <div class="form-group form-row">
-          <div class="col">
-            <label for="address">Endereço: </label>
-            <input type="text" class="form-control" placeholder="Endereço" name="address">
+          <div class="form-row">
+            <div class="col-5">
+              <label for="address">Endereço: </label>
+              <input type="text" class="form-control" maxlength="30" placeholder="Endereço" name="address">
+            </div>
+            <div class="col-3">
+              <label for="complement">Complemento: </label>
+              <input type="text" class="form-control" maxlength="20" placeholder="Complemento" name="complement">
+            </div>
           </div>
-          <div class="col">
-            <label for="cep">CEP: </label>
-            <input type="text" class="form-control" placeholder="CEP" name="cep">
-          </div>
-          <div class="col">
-            <label for="complement">Complemento: </label>
-            <input type="text" class="form-control" placeholder="Complemento" name="complement">
-          </div>
-          <div class="col">
-            <label for="number">Nº: </label>
-            <input type="text" class="form-control" placeholder="Número" name="number">
+          <div class="form-row">
+            <div class="col-2">
+              <label for="cep">CEP: </label>
+              <input type="text" class="form-control" maxlength="9" placeholder="CEP" name="cep">
+            </div>
+            <div class="col-1">
+              <label for="number">Nº: </label>
+              <input type="text" class="form-control" maxlength="3" placeholder="Número" name="number">
+            </div>
           </div>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>

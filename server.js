@@ -54,11 +54,27 @@ app.route('/edit/:id').get((req, res) => {
     var id = req.params.id
     var name = req.body.name
     var surname = req.body.surname
+    var sex = req.body.sex
+    var birth = req.body.birth
+    var email = req.body.email
+    var phone = req.body.phone
+    var address = req.body.address
+    var complement = req.body.complement
+    var cep = req.body.cep
+    var number = req.body.number
 
     db.collection('data').updateOne({_id: ObjectId(id)}, {
         $set: {
             name: name,
-            surname: surname
+            surname: surname,
+            sex: sex,
+            birth: birth,
+            email: email,
+            phone: phone,
+            address: address,
+            complement: complement,
+            cep: cep,
+            number: number
         }
     }, (err, result) => {
         if (err) return res.send(err)
