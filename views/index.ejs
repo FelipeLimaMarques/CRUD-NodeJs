@@ -3,15 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>My CRUD in NodeJS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+  <main>
  
-    <h2>Registrar<h2>
+    <h2>Registrar</h2>
     <form action="/show" method="POST">
-        <input type="text" placeholder="Nome" name="name">
-        <input type="text" placeholder="Sobrenome" name="surname">
-        <button type="submit">Submit</button>
+        <div class="form-group form-row">
+          <div class="col">
+            <label for="name">Nome: </label>
+            <input type="text" class="form-control" placeholder="Nome" name="name">
+          </div>
+          <div class="col">
+            <label for="surname">Sobrenome: </label>
+            <input type="text" class="form-control" placeholder="Sobrenome" name="surname">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sex">Sexo: </label>
+          <select id="sex" class="form-control">
+            <option value="male">Masculino</option>
+            <option value="female">Feminino</option>
+            <option value="other">Outro</option>
+          </select>
+        </div>
+        <div class="form-group form-row">
+          <div class="col">
+            <label for="email">Email: </label>
+            <input type="text" class="form-control" placeholder="E-mail" name="email">
+          </div>
+          <div class="col">
+            <label for="phone">Telefone: </label>
+            <input type="text" class="form-control" placeholder="Telefone" name="phone">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="birth">Nascimento: </label>
+          <input type="date" id="birth" name="birth">
+        </div>
+        <div class="form-group form-row">
+          <div class="col">
+            <label for="address">Endereço: </label>
+            <input type="text" class="form-control" placeholder="Endereço" name="address">
+          </div>
+          <div class="col">
+            <label for="cep">CEP: </label>
+            <input type="text" class="form-control" placeholder="CEP" name="cep">
+          </div>
+          <div class="col">
+            <label for="complement">Complemento: </label>
+            <input type="text" class="form-control" placeholder="Complemento" name="complement">
+          </div>
+          <div class="col">
+            <label for="number">Nº: </label>
+            <input type="text" class="form-control" placeholder="Número" name="number">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
     </form> 
- 
+  </main>
 </body>
 </html>
