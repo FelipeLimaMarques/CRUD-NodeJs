@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <title>A2 CRUD em NodeJs</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<h2>Registros</h2>
-    <table class="table table-hover">
+  <header>
+    <h2>Registrados</h2>
+  </header>
+  <main>
+    <table class="table">
         <thead>
             <tr>
                 <td>Nome</td>
@@ -36,11 +39,12 @@
                 <td><%= details.complement %></td>
                 <td><%= details.cep %></td>
                 <td><%= details.number %></td>
-                <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Deletar</a></td>
+                <td><a href="/edit/<%= details._id %>">Editar</a> <a href="/delete/<%= details._id %>">Deletar</a></td>
             </tr>
-            <% }) %>
+        <% }) %>
         </tbody>
       </table>
-      <button type="submit" class="btn btn-primary" onclick="window.location='/';">Novo</button>
+      <button type="submit" class="btn btn-primary btn-dark" onclick="window.location='/';">Novo</button>
+    </main>
 </body>
 </html>

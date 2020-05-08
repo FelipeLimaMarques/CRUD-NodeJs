@@ -1,0 +1,61 @@
+*{
+    background-color: #DEDEDE;
+}
+
+body{
+    background-color: #DEDEDE;
+    color: #2E2E2E;
+}
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+}
+
+h2{
+    background-color: #2E2E2E;
+    color: #DEDEDE;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+#name{
+    width: 350px;
+}
+
+#surname{
+    width: 350px;
+}
+
+#sex{
+    width: 150px;
+}
+
+#birth{
+    width: 150px;
+}
+
+#email{
+    width: 350px;
+}
+
+#phone{
+    width: 150px;
+}
+
+#address{
+    width: 350px;
+}
+
+#complement{
+    width: 300px;
+}
+
+#cep{
+    width: 120px;
+}
+
+#number{
+    width: 80px;
+}
